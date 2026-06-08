@@ -1,0 +1,14 @@
+# IDE
+.idea/
+
+# CMake build output
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+build/
+
+# Compiled binaries
+*.o
+*.out
+wordleClone

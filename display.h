@@ -5,9 +5,16 @@
 #ifndef WORDLECLONE_DISPLAY_H
 #define WORDLECLONE_DISPLAY_H
 
+#include "guess.h"
+#include <string>
+#include <array>
+#include <vector>
 
-class display {
+struct GuessResult {
+    std::string guess;
+    std::array<LetterResult, 5> scores;
 };
 
+void printBoard(const std::vector<GuessResult> board);
 
 #endif //WORDLECLONE_DISPLAY_H

@@ -3,7 +3,6 @@
 //
 
 #include "display.h"
-#include "guess.h"
 #include <string>
 #include <iostream>
 #include <array>
@@ -33,4 +32,8 @@ void printRow(const std::string& guess, const std::array<LetterResult, 5>& guess
     std::cout << '\n';
 }
 
-void printBoard(const std::vector<std::vector>)
+void printBoard(const std::vector<GuessResult>& board) {
+    for (const GuessResult& currResult: board) {
+        printRow(currResult.guess, currResult.scores);
+    }
+}

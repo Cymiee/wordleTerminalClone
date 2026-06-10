@@ -5,9 +5,6 @@
 #ifndef WORDLECLONE_GUESS_H
 #define WORDLECLONE_GUESS_H
 
-
-class guess {
-};
-
+enum class LetterResult { Wrong, Misplaced, Correct};
 
 #endif //WORDLECLONE_GUESS_H

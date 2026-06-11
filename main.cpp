@@ -12,7 +12,8 @@ void clearTerminal() {
 
 int main() {
     int guessNo {0};
-    std::string answer = getWord();
+    const std::vector<std::string> words {loadWords()};
+    const std::string answer = pickWord(words);
     std::cout << answer << '\n';
     std::vector<GuessResult> board;
 

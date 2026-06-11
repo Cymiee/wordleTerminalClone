@@ -27,8 +27,7 @@ std::vector<std::string> loadWords() {
     return words;
 }
 
-std::string getWord() {
-    const std::vector<std::string> words = loadWords();
+std::string pickWord(const std::vector<std::string>& words) {
     if (words.empty()) {
         std::cerr << "Error: word list is empty\n";
         return "";

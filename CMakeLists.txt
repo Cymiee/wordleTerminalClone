@@ -10,3 +10,5 @@ add_executable(wordleClone main.cpp
         guess.h
         display.cpp
         display.h)
+
+target_compile_definitions(wordleClone PRIVATE WORDS_FILE="${CMAKE_SOURCE_DIR}/words.txt")

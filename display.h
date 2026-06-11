@@ -15,6 +15,6 @@ struct GuessResult {
     std::array<LetterResult, 5> scores;
 };
 
-void printBoard(const std::vector<GuessResult> board);
+void printBoard(const std::vector<GuessResult>& board);
 
 #endif //WORDLECLONE_DISPLAY_H

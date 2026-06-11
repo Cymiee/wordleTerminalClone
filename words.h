@@ -8,7 +8,6 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> loadWords();
-std::string pickWord(const std::vector<std::string>& words);
+std::string getWord();
 
 #endif //WORDLECLONE_WORDS_H

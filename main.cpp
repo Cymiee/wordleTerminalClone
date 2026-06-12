@@ -16,7 +16,6 @@ int main() {
     int guessNo {0};
     const std::vector<std::string> words {loadWords()};
     const std::string answer = pickWord(words);
-    std::cout << answer << '\n';
     std::vector<GuessResult> board;
 
     while (true) {

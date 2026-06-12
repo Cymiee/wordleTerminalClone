@@ -58,7 +58,7 @@ void printKeyboard(const std::vector<GuessResult>& board) {
         }
     }
 
-    const std::string rows[3] = {"qwertyuiop", "asdfghjkl", "zxcvbnm"};
+    constexpr std::string rows[3] = {"qwertyuiop", " asdfghjkl", "  zxcvbnm"};
 
     for (const std::string& row : rows) {
         for (char c : row) {
@@ -72,6 +72,7 @@ void printKeyboard(const std::vector<GuessResult>& board) {
             } else {
                 std::cout << GRAY << c << RESET;
             }
+            std::cout << ' ';
         }
         std::cout << '\n';
     }

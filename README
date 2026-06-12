@@ -1,2 +1,37 @@
-Simple Wordle-like game that you can play in your terminal.
-Written in C++.
+# Wordle Clone
+
+A terminal-based Wordle clone written in C++23.
+
+## How to play
+
+Guess the hidden 5-letter word in 6 attempts. After each guess the board updates
+with color-coded feedback:
+
+- Green  — correct letter, correct position
+- Yellow — correct letter, wrong position
+- Gray   — letter not in the word
+
+A color-coded keyboard is shown below the board to track which letters you have
+already used.
+
+Guesses must be real words from the word list. The game ends when you guess
+correctly or exhaust all 6 attempts.
+
+## Build
+
+Requires CMake 4.2+ and a C++23-capable compiler (GCC 13+ or Clang 16+).
+
+    cmake -S . -B build
+    cmake --build build
+
+## Run
+
+    ./build/wordleClone
+
+## Project structure
+
+    main.cpp      — game loop, input handling
+    words.cpp/h   — word list loading and random word selection
+    guess.cpp/h   — scoring logic and guess validation
+    display.cpp/h — board and keyboard rendering (ANSI color codes)
+    words.txt     — sorted list of valid 5-letter words

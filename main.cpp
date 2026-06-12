@@ -1,9 +1,11 @@
+#include <algorithm>
+
 #include "words.h"
 #include "display.h"
 #include "guess.h"
 
 #include <iostream>
-#include <cstdlib>
+
 
 void clearTerminal() {
     // \033[2J clears the screen, \033[1;1H moves cursor to row 1, column 1
@@ -18,7 +20,7 @@ int main() {
     std::vector<GuessResult> board;
 
     while (true) {
-        std::system("clear");
+        clearTerminal();
         std::cout << "Guess the word:\n";
         std::string guess;
         std::cin >> guess;
@@ -28,10 +30,17 @@ int main() {
             continue;
         }
 
+        if (!validateGuess(guess, words)) {
+            std::cout << "Please enter a valid word.\n";
+            continue;
+        }
+
         const std::array result {scoreGuess(guess, answer)};
         GuessResult guessResult {guess, result};
         board.push_back(guessResult);
         printBoard(board);
+        std::cout << '\n';
+        printKeyboard(board);
         guessNo++;
 
         if (guess == answer) {

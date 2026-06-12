@@ -3,8 +3,11 @@
 //
 
 #include "guess.h"
+
+#include <algorithm>
 #include <array>
 #include <string>
+#include <vector>
 
 std::array<LetterResult, 5> scoreGuess(const std::string& guess, const std::string& answer) {
     std::array<LetterResult, 5> result {LetterResult::Wrong};
@@ -32,4 +35,8 @@ std::array<LetterResult, 5> scoreGuess(const std::string& guess, const std::stri
     }
 
     return result;
+}
+
+bool validateGuess(const std::string& guess, const std::vector<std::string>& words) {
+    return std::ranges::binary_search(words, guess);
 }

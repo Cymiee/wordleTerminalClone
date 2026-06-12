@@ -16,5 +16,6 @@ struct GuessResult {
 };
 
 void printBoard(const std::vector<GuessResult>& board);
+void printKeyboard(const std::vector<GuessResult>& board);
 
 #endif //WORDLECLONE_DISPLAY_H
